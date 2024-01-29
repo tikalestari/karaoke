@@ -31,6 +31,13 @@ export type INavLink = {
     tags?: string;
   };
   
+  export type INewUser = {
+    name: string;
+    email: string;
+    username: string;
+    password: string;
+  };
+
   export type IUser = {
     id: string;
     name: string;
@@ -39,10 +46,26 @@ export type INavLink = {
     imageUrl: string;
     bio: string;
   };
-  
-  export type INewUser = {
+
+  export type ISong = {
+    id: string;
+    title: string;
+    artist: string;
+    genre: string;
+    youtubeUrl: string;
+  };
+
+  export type IPlaylist = {
+    id: string;
     name: string;
-    email: string;
-    username: string;
-    password: string;
+    creatorId: string;
+    songs: ISong[];
+  };
+
+  export type IRoom = {
+    id: string;
+    code: string;
+    hostId: string;
+    participants: IUser[];
+    songQueue: ISong[];
   };
