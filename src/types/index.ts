@@ -44,7 +44,6 @@ export type INavLink = {
     username: string;
     email: string;
     imageUrl: string;
-    bio: string;
   };
 
   export type ISong = {
